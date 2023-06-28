@@ -42,7 +42,6 @@ class SinglyLinkedList:
     """Represent a singly-linked list."""
 
     def __init__(self):
-
         """Initalize a new SinglyLinkedList."""
         self.__head = None
 
@@ -56,11 +55,6 @@ class SinglyLinkedList:
             value (Node): The new Node to insert.
         """
         new = Node(value)
-    
-
-
-
-
         if self.__head is None:
             new.next_node = None
             self.__head = new
@@ -75,20 +69,10 @@ class SinglyLinkedList:
             new.next_node = tmp.next_node
             tmp.next_node = new
 
-
-
-
-
-
     def __str__(self):
         """Define the print() representation of a SinglyLinkedList."""
         values = []
         tmp = self.__head
-
-
-
-
-
         while tmp is not None:
             values.append(str(tmp.data))
             tmp = tmp.next_node
