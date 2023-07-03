@@ -86,9 +86,6 @@ def xout(board, row, col):
         c -= 1
     # X out all spots diagonally up to the right
     c = col + 1
-    
-
-
     for r in range(row - 1, -1, -1):
         if c >= len(board):
             break
@@ -96,9 +93,6 @@ def xout(board, row, col):
         c += 1
     # X out all spots diagonally down to the left
     c = col - 1
-    
-
-
     for r in range(row + 1, len(board)):
         if c < 0:
             break
@@ -117,15 +111,9 @@ def recursive_solve(board, row, queens, solutions):
     Returns:
         solutions
     """
-    
-
-
     if queens == len(board):
         solutions.append(get_solution(board))
         return (solutions)
-
-    
-
 
     for c in range(len(board)):
         if board[row][c] == " ":
@@ -139,15 +127,9 @@ def recursive_solve(board, row, queens, solutions):
 
 
 if __name__ == "__main__":
-    
-
-
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
-    
-
-
     if sys.argv[1].isdigit() is False:
         print("N must be a number")
         sys.exit(1)
