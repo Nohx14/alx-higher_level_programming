@@ -11,13 +11,6 @@ def max_integer(list=[]):
         return None
     result = list[0]
     i = 1
-    
-
-
-
-
-
-
     while i < len(list):
         if list[i] > result:
             result = list[i]
